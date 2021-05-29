@@ -9,6 +9,9 @@ use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
+use App\Models\User;
+
+
 
 class ChatEvent implements ShouldBroadcast
 {
@@ -23,8 +26,8 @@ class ChatEvent implements ShouldBroadcast
      */
     public function __construct($message, User $user)
     {
-        return $this->message = $message;
-        return $this->user = $user;
+         $this->message = $message;
+         $this->user = $user->name;
     }
 
     /**

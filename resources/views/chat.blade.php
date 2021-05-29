@@ -10,7 +10,7 @@
     <style>
         .list-group{
             overflow-y: scroll;
-            height: 200px;
+            height: 250px;
         }
     </style>
     <body>
