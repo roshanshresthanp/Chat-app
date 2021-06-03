@@ -48,5 +48,12 @@ const app = new Vue({
             }
 
         }
+    },
+    mounted(){
+        // var_dump("**************");
+        Echo.private(`chat`)
+            .listen('ChatEvent', (e) => {
+            console.log(e);
+    });
     }
 });

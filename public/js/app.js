@@ -1927,6 +1927,12 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1__.default({
         this.message = '';
       }
     }
+  },
+  mounted: function mounted() {
+    // var_dump("**************");
+    Echo["private"]("chat").listen('ChatEvent', function (e) {
+      console.log(e);
+    });
   }
 });
 
